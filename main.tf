@@ -2,7 +2,8 @@
 variable "access_key" {}
 variable "secret_key" {}
 variable "ssh_key_name" {}
-variable "private_key_path"{}
+variable "ssh_key_private"{}
+variable "region" {}
 
 
 
