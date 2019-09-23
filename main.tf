@@ -1,3 +1,13 @@
+
+variable "access_key" {}
+variable "secret_key" {}
+variable "ssh_key_name" {}
+variable "private_key_path"{}
+
+
+
+
+
 provider "aws" {
   access_key = var.access_key
   secret_key = var.secret_key
