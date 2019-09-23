@@ -6,7 +6,7 @@ variable "ssh_key_private"{}
 variable "region" {}
 variable "appservercount" {}
 
-
+# some stupid comment
 
 
 provider "aws" {
