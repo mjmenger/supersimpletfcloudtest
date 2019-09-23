@@ -41,7 +41,7 @@ resource "aws_instance" "appsvr" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = "${var.ssh_key_private)}"
+    private_key = "${var.ssh_key_private}"
     host        = self.public_ip
   }
 
