@@ -45,6 +45,17 @@ resource "aws_instance" "appsvr" {
     host        = self.public_ip
   }
 
+  provisioner "remote-exec" {
+    inline = [
+      "sudo yum update -y",
+      "sudo yum install -y docker",
+      "sudo service docker start",
+      "sudo docker pull bkimminich/juice-shop",
+      "sudo docker run -d -p 8081:3000 bkimminich/juice-shop || true"
+    ]
+  }
+
+
 }
 
 resource "aws_security_group" "appsvr-sg" {
