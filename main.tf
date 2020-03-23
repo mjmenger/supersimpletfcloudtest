@@ -28,7 +28,6 @@ data "aws_ami" "latestnginxserver" {
 
 
 resource "aws_instance" "appsvr" {
-  count = 2
   ami                     = "${data.aws_ami.latestnginxserver.id}"
   instance_type           = "t2.micro"
   key_name                = "${var.ssh_key_name}"
